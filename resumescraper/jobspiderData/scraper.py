@@ -40,6 +40,7 @@ class jobspiderResumeUtill():
             print("ERROR")
             return 0
 
+        number_of_pages = number_of_pages.replace(',','')
         number_of_pages = int(number_of_pages)
         number_of_pages = ceil(number_of_pages/50)
         number_of_pages = max(number_of_pages,1)

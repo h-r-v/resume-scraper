@@ -3,8 +3,8 @@ from resumescraper.livecareerData.scraper import livecareerResumeUtill
 from resumescraper.jobspiderData.scraper import jobspiderResumeUtill
 from resumecluster.number_of_pdfs import number_of_pdfs
 
-total_n = 30
-job_title = "hr analyst"
+total_n = 100
+job_title = "banking"
 
 left_n = total_n
 counter = 0
@@ -19,7 +19,7 @@ counter = js.fetch()
 
 print(counter)
 
-data = number_of_pdfs(job_title)
+data = number_of_pdfs(os.path.join(os.getcwd(),job_title))
 x,y = data[1]
 
 print(f"{data[0]} types of CVs found.")

@@ -38,6 +38,7 @@ class livecareerResumeUtill():
             return 0
 
         number_of_pages = number_of_pages.split()[0]
+        number_of_pages = number_of_pages.replace(',','')
         number_of_pages = int(number_of_pages)
         number_of_pages = ceil(number_of_pages/10)
         number_of_pages = max(number_of_pages,1)
@@ -66,20 +67,24 @@ class livecareerResumeUtill():
         page = r.get(link)
         soup = BeautifulSoup(page.text, 'html.parser') 
 
-        soup.find('body').contents = soup.find('div', {'id':'divResumeHTML'}).contents
+        try:
+            soup.find('body').contents = soup.find('div', {'id':'divResumeHTML'}).contents
 
-        with open("f.html", 'w') as f:
-            f.write(str(soup.contents[1]))
+            with open("f.html", 'w') as f:
+                f.write(str(soup.contents[1]))
 
-        with open("f.html", 'rb') as f:
-            pdf = weasyprint.HTML(f).write_pdf()
+            with open("f.html", 'rb') as f:
+                pdf = weasyprint.HTML(f).write_pdf()
 
-        file_ = os.path.join(self.job_title, f"{self.opname}{self.counter}.pdf")
+            file_ = os.path.join(self.job_title, f"{self.opname}{self.counter}.pdf")
 
-        with open(file_, 'wb') as f:
-            f.write(pdf)
+            with open(file_, 'wb') as f:
+                f.write(pdf)
 
-        self.counter+=1
+            self.counter+=1
+
+        except:
+            print('ERROR going to next')
 
         
 

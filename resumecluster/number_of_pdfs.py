@@ -60,4 +60,4 @@ def number_of_pdfs(fpath):
     return [len(np.unique(clusters.labels_)),list([class__, count__])]
     
 if __name__=='__main__':
-    print(number_of_pdfs(os.path.join('resumecluster/dataset','GoodData')))
+    print(number_of_pdfs(os.path.join(os.getcwd(),'banking')))
