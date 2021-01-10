@@ -48,18 +48,18 @@ This module is used to scrape the above mentioned websites and download them as 
 
 **# Directory Structure**
 
-- py: This file is used to combine the &#39;resumecluster&#39; and &#39;resumescraper&#39; modules for ease of access.
+- umbrealla.py: This file is used to combine the &#39;resumecluster&#39; and &#39;resumescraper&#39; modules for ease of access.
 - Inside resumecluster dir:
 
 - number\_of\_pdfs.py: This is the file that uses a pre-trained CNN model to classify the already downloaded pdfs.
 
 - Inside resumescraper dir:
 
-- googleData: This dir has a scraperr.py file that scrapes and downloads resumes as pdf.
+  - googleData: This dir has a scraperr.py file that scrapes and downloads resumes as pdf.
 
-- jobspiderData: This dir has a scraper.py file that scrapes and downloads resumes as pdf.
+  - jobspiderData: This dir has a scraper.py file that scrapes and downloads resumes as pdf.
 
-- livecareerData: This dir has a scraper.py file that scrapes and downloads resumes as pdf.
+  - livecareerData: This dir has a scraper.py file that scrapes and downloads resumes as pdf.
 
 **# Demo Video**
 
