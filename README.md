@@ -24,34 +24,34 @@ This module is used to scrape the above mentioned websites and download them as 
 
 1. Installing python 3.8.5
 
-- wget https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tgz
-- tar -xvf Python-3.8.5.tgz
-- cd Python-3.8.5
-- ./configure
-- make
-- make altinstall
+  - wget https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tgz
+  - tar -xvf Python-3.8.5.tgz
+  - cd Python-3.8.5
+  - ./configure
+  - make
+  - make altinstall
 
 2. Create virtual environment
 
-- python3 -m venv env\_RP
+  - python3 -m venv env\_RP
 
 3. Activate environment and install dependencies:
 
-- source env\_RP/bin/activate
-- pip install -r requirements.txt
+  - source env\_RP/bin/activate
+  - pip install -r requirements.txt
 
 4. Launching and using the tool
 
-- Open &#39;umbrella.py&#39; in a text editor.
-- Change the job\_title variable as per the requirement and save the file.
-- Launch the umbrella.py file.
+  - Open &#39;umbrella.py&#39; in a text editor.
+  - Change the job\_title variable as per the requirement and save the file.
+  - Launch the umbrella.py file.
 
 **# Directory Structure**
 
 - umbrealla.py: This file is used to combine the &#39;resumecluster&#39; and &#39;resumescraper&#39; modules for ease of access.
 - Inside resumecluster dir:
 
-- number\_of\_pdfs.py: This is the file that uses a pre-trained CNN model to classify the already downloaded pdfs.
+  - number\_of\_pdfs.py: This is the file that uses a pre-trained CNN model to classify the already downloaded pdfs.
 
 - Inside resumescraper dir:
 
